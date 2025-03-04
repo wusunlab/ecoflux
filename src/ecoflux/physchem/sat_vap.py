@@ -1,4 +1,5 @@
 """Saturation vapor pressure of water."""
+
 import numpy as _np
 import scipy.constants as _sc
 from scipy import optimize as _optimize
@@ -99,7 +100,7 @@ def p_sat_h2o(temp, ice=False, kelvin=False, method="gg"):
                 + 8.1328e-3 * (10 ** (-3.49149 * (u_T - 1)) - 1)
                 + _np.log10(1013.246)
             )
-            e_sat = 10 ** e_sat * 100
+            e_sat = 10**e_sat * 100
     else:
         if method == "buck":
             T_c = T_k - T_0  # temperature in Celsius degree
@@ -121,7 +122,7 @@ def p_sat_h2o(temp, ice=False, kelvin=False, method="gg"):
                 + 0.876793 * (1 - v_T)
                 + _np.log10(6.1071)
             )
-            e_sat = 10 ** e_sat * 100
+            e_sat = 10**e_sat * 100
 
     return e_sat
 

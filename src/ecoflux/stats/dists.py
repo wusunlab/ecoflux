@@ -1,4 +1,5 @@
 """A collection of functions of statistical distributions."""
+
 import numpy as _np
 
 

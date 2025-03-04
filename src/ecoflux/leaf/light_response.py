@@ -1,4 +1,5 @@
 """Light response of leaf photosynthesis."""
+
 from typing import Tuple
 
 import numpy as _np
@@ -41,7 +42,9 @@ def michaelis_menten(p: Tuple[float, float, float], par: _np.ndarray):
 
 
 def residual_michaelis_menten(
-    p: Tuple[float, float, float], par: _np.ndarray, A_n: _np.ndarray,
+    p: Tuple[float, float, float],
+    par: _np.ndarray,
+    A_n: _np.ndarray,
 ):
     r"""
     Residual function for Michaelis–Menten light response.
@@ -129,7 +132,9 @@ def hyperbolic(p: Tuple[float, float, float, float], par: _np.ndarray):
 
 
 def residual_hyperbolic(
-    p: Tuple[float, float, float, float], par: _np.ndarray, A_n: _np.ndarray,
+    p: Tuple[float, float, float, float],
+    par: _np.ndarray,
+    A_n: _np.ndarray,
 ):
     r"""
     Residual function for the hyperbolic light response.

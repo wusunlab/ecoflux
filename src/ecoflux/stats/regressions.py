@@ -1,4 +1,5 @@
 """A collection of regression functions."""
+
 from collections import namedtuple
 
 import numpy as _np

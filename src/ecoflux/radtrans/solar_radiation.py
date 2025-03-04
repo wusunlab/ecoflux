@@ -1,4 +1,5 @@
 """Solar radiation."""
+
 import datetime
 from collections import namedtuple
 
@@ -140,9 +141,9 @@ def solar_angle(dt, lat, lon, timezone=0.0):
         * var_y
         * _np.sin(_np.radians(geom_mean_anom_sun))
         * _np.cos(2.0 * _np.radians(geom_mean_lon_sun))
-        - 0.5 * var_y ** 2 * _np.sin(4.0 * _np.radians(geom_mean_lon_sun))
+        - 0.5 * var_y**2 * _np.sin(4.0 * _np.radians(geom_mean_lon_sun))
         - 1.25
-        * eccentricity ** 2
+        * eccentricity**2
         * _np.sin(2.0 * _np.radians(geom_mean_anom_sun))
     )
     # in minutes
@@ -244,9 +245,9 @@ def solar_angle(dt, lat, lon, timezone=0.0):
         approx_atmos_refrac = (
             1735.0
             - 518.2 * solar_elev_angle
-            + 103.4 * solar_elev_angle ** 2
-            - 12.79 * solar_elev_angle ** 3
-            + 0.711 * solar_elev_angle ** 4
+            + 103.4 * solar_elev_angle**2
+            - 12.79 * solar_elev_angle**3
+            + 0.711 * solar_elev_angle**4
         ) / 3600.0
     elif solar_elev_angle <= -0.575:
         approx_atmos_refrac = (
@@ -311,7 +312,7 @@ def planck_law(wavelength, temp, emissivity=1.0, kelvin=False):
 
     """
     T_k = temp + (not kelvin) * _sc.zero_Celsius
-    c1 = 2.0 * _sc.h * _sc.c ** 2
+    c1 = 2.0 * _sc.h * _sc.c**2
     c2 = _sc.h * _sc.c / _sc.k
     try:
         B_lambda = (

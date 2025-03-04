@@ -1,4 +1,5 @@
 """A collection of physical, chemical, and environmental constants."""
+
 from typing import List
 
 import scipy.constants as _sc

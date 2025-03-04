@@ -1,4 +1,5 @@
 """A collection of functions for summary statistics."""
+
 import numpy as _np
 
 
